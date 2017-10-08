@@ -17,6 +17,7 @@
 #ifndef __CUTILS_STRING16_H
 #define __CUTILS_STRING16_H
 
+#include <uchar.h>
 #include <stdint.h>
 #include <stddef.h>
 

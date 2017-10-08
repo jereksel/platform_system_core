@@ -39,15 +39,15 @@ CallStack::~CallStack() {
 }
 
 void CallStack::update(int32_t ignoreDepth, pid_t tid) {
-    mFrameLines.clear();
+    // mFrameLines.clear();
 
-    std::unique_ptr<Backtrace> backtrace(Backtrace::Create(BACKTRACE_CURRENT_PROCESS, tid));
-    if (!backtrace->Unwind(ignoreDepth)) {
-        ALOGW("%s: Failed to unwind callstack.", __FUNCTION__);
-    }
-    for (size_t i = 0; i < backtrace->NumFrames(); i++) {
-      mFrameLines.push_back(String8(backtrace->FormatFrameData(i).c_str()));
-    }
+    // std::unique_ptr<Backtrace> backtrace(Backtrace::Create(BACKTRACE_CURRENT_PROCESS, tid));
+    // if (!backtrace->Unwind(ignoreDepth)) {
+    //     ALOGW("%s: Failed to unwind callstack.", __FUNCTION__);
+    // }
+    // for (size_t i = 0; i < backtrace->NumFrames(); i++) {
+    //   mFrameLines.push_back(String8(backtrace->FormatFrameData(i).c_str()));
+    // }
 }
 
 void CallStack::log(const char* logtag, android_LogPriority priority, const char* prefix) const {

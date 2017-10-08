@@ -300,7 +300,7 @@ int32_t ZipWriter::CompressBytes(FileInfo* file, const void* data, size_t len) {
   assert(z_stream_->avail_out != 0);
 
   // Prepare the input.
-  z_stream_->next_in = reinterpret_cast<const uint8_t*>(data);
+  z_stream_->next_in = (unsigned char*) reinterpret_cast<const uint8_t*>(data);
   z_stream_->avail_in = len;
 
   while (z_stream_->avail_in > 0) {

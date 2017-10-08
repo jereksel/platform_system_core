@@ -274,7 +274,7 @@ static int32_t MapCentralDirectory0(int fd, const char* debug_file_name,
         eocd->cd_start_offset, eocd->cd_size, static_cast<int64_t>(eocd_offset));
 #if defined(__ANDROID__)
     if (eocd->cd_start_offset + eocd->cd_size <= eocd_offset) {
-      android_errorWriteLog(0x534e4554, "31251826");
+      // android_errorWriteLog(0x534e4554, "31251826");
     }
 #endif
     return kInvalidOffset;
@@ -389,7 +389,7 @@ static int32_t ParseZipArchive(ZipArchive* archive) {
     if (ptr > cd_end - sizeof(CentralDirectoryRecord)) {
       ALOGW("Zip: ran off the end (at %" PRIu16 ")", i);
 #if defined(__ANDROID__)
-      android_errorWriteLog(0x534e4554, "36392138");
+      // android_errorWriteLog(0x534e4554, "36392138");
 #endif
       return -1;
     }

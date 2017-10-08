@@ -196,11 +196,11 @@ static int getCGroupSubsys(int tid, const char* subsys, char* buf, size_t bufLen
         return 0;
     }
 
-    SLOGE("Failed to find subsys %s", subsys);
+    //SLOGE("Failed to find subsys %s", subsys);
     fclose(fp);
     return -1;
  out_bad_data:
-    SLOGE("Bad cgroup data {%s}", lineBuf);
+    //SLOGE("Bad cgroup data {%s}", lineBuf);
     fclose(fp);
     return -1;
 #else

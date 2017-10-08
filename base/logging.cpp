@@ -224,10 +224,10 @@ void LogdLogger::operator()(LogId id, LogSeverity severity, const char* tag,
   log_id lg_id = kLogIdToAndroidLogId[id];
 
   if (priority == ANDROID_LOG_FATAL) {
-    __android_log_buf_print(lg_id, priority, tag, "%s:%u] %s", file, line,
-                            message);
+    // __android_log_buf_print(lg_id, priority, tag, "%s:%u] %s", file, line,
+                            // message);
   } else {
-    __android_log_buf_print(lg_id, priority, tag, "%s", message);
+    // __android_log_buf_print(lg_id, priority, tag, "%s", message);
   }
 }
 #endif
