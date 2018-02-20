@@ -16,6 +16,7 @@
 
 #include "android-base/file.h"
 
+#include <android/legacy_errno_inlines.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <sys/stat.h>
@@ -23,7 +24,7 @@
 
 #include <string>
 
-#include "android-base/macros.h"  // For TEMP_FAILURE_RETRY on Darwin.
+#include <string.h>  // For TEMP_FAILURE_RETRY on Darwin.
 #include "android-base/utf8.h"
 #define LOG_TAG "base.file"
 #include "cutils/log.h"

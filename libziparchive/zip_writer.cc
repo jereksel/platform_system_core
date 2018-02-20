@@ -22,6 +22,7 @@
 
 #include <sys/param.h>
 
+#include <string.h>
 #include <cassert>
 #include <cstdio>
 #include <memory>

@@ -29,6 +29,9 @@
 #include <functional>
 #include <memory>
 #include <ostream>
+#include <string.h>
+#include <linux/errno.h>
+#include <errno.h>
 
 #include "android-base/macros.h"
 

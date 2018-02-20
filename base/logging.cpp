@@ -29,6 +29,8 @@
 #include <errno.h>
 #endif
 
+#include <string.h>
+
 #include <iostream>
 #include <limits>
 #include <sstream>
